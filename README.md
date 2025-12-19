@@ -42,6 +42,10 @@ make compose-up
 
 Kafka UI starts at http://localhost:8081
 
+## React application
+
+React application starts at http://localhost:3000
+
 ---
 
 ## Additional Information
@@ -50,3 +54,4 @@ For additional information about all modules go to local README files
 
 - [backend](./backend/README.md)
 - [scraper](./scraper/README.md)
+- [frontend](./frontend/README.md)

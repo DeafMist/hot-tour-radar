@@ -121,6 +121,17 @@ services:
       ELASTICSEARCH_INDEX: news
       LOG_LEVEL: info
 
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: search-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
   retention:
     build:
       context: .
