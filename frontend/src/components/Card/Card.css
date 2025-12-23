@@ -1,0 +1,53 @@
+.card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    margin: 10px 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #111;
+}
+
+.card p {
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.cards-container {
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+    padding-top: 10px;
+
+    scroll-behavior: smooth;
+}
+
+.cards-container::before {
+    content: "";
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    pointer-events: none;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    z-index: 5;
+}
